@@ -1,6 +1,8 @@
 package auth
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+)
 
 /*
 	本模块的是登陆认证模块
@@ -10,7 +12,7 @@ import "github.com/gin-gonic/gin"
 var auth_root string = "/auth/"
 
 // 初始化模块的路由
-func InitRouter() map[string] gin.HandlerFunc {
+func Init() map[string] gin.HandlerFunc {
 	var router map[string] gin.HandlerFunc
 	router = make(map[string] gin.HandlerFunc)
 	router[auth_root + "login"] = Login
