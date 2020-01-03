@@ -14,3 +14,8 @@ func Login(c *gin.Context) {
         c.String(http.StatusOK,"login failed")
     }
 }
+
+
+func Logout(c *gin.Context) {
+	c.String(http.StatusOK,"logout success")
+}
